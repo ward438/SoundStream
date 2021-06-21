@@ -16,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/ward438/SoundStream/issues"
   },
-  "homepage": "https://github.com/ward438/SoundStream#readme"
+  "homepage": "https://github.com/ward438/SoundStream#readme",
+  "dependencies": {
+    "connect": "^3.7.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
+    "jquery": "^3.6.0",
+    "mongoose": "^5.12.14",
+    "path": "^0.12.7"
+  }
 }
