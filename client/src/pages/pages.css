@@ -1,0 +1,26 @@
+
+.center {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 5em;
+    
+  }
+
+.landingBox {
+    background-color: lightgrey;
+    max-width: 40em;
+    height: 20em;
+    border: 2px solid rgb(53, 159, 200);
+    padding: 30px;
+    margin: 10px;
+    border-radius:15px
+  }
+
+.topCard {
+  margin-top: .7em;
+}
+
+.bottomCard {
+  margin-top: 1em;
+}
