@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
 import { Container, Row, Col } from "shards-react";
 import { Card, CardBody, CardTitle, CardSubtitle } from "shards-react";
+import Audio from '../components/audioPlayer';
 
 
 export function Landing() {
@@ -31,7 +32,7 @@ export function Landing() {
                 </Col>
                 <Col>
                     <Container className="landingBox">
-                        test container: This is an imaginary box
+                        <Audio/>
                     </Container>
                 </Col>
             </Row>
