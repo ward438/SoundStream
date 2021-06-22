@@ -1,4 +1,8 @@
 
+body {
+  background-color: rgb(241, 233, 233);
+}
+
 .center {
     display: flex;
     justify-content: center;
@@ -7,18 +11,12 @@
     
   }
 
-.landingBox {
-    background-color: lightgrey;
-    max-width: 40em;
-    height: 20em;
-    border: 2px solid rgb(53, 159, 200);
-    padding: 30px;
-    margin: 10px;
-    border-radius:15px
+.musicPlayer {
+    margin-top: 2em;
   }
 
 .topCard {
-  margin-top: .7em;
+  margin-top: 2em;
 }
 
 .bottomCard {

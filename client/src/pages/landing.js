@@ -1,23 +1,12 @@
 import React from "react";
-import { ListGroup, ListGroupItem } from "shards-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
 import { Container, Row, Col } from "shards-react";
-import { Card, CardBody, CardTitle, CardSubtitle } from "shards-react";
-import Audio from '../components/audioPlayer';
+import { Card, CardBody, CardTitle, CardSubtitle, CardImg } from "shards-react";
+import AudioPlayer from '../components/audioPlayer';
 
 
 export function Landing() {
-    //   return (
-    //     <ListGroup>
-    //       <ListGroupItem>This is the landing page</ListGroupItem>
-    //       <ListGroupItem>HOORAY</ListGroupItem>
-    //       <ListGroupItem>Morbi leo risus</ListGroupItem>
-    //       <ListGroupItem>Porta ac consectetur ac</ListGroupItem>
-    //       <ListGroupItem>Vestibulum at eros</ListGroupItem>
-    //     </ListGroup>
-    //   );
-    // }
     return (
         <Container className="dr-example-container">
             <Row>
@@ -31,8 +20,18 @@ export function Landing() {
                     </Card>
                 </Col>
                 <Col>
-                    <Container className="landingBox">
-                        <Audio/>
+                    <Container className="musicPlayer">                                             
+                            <Card>
+                                <CardBody>
+                                    <CardTitle>Song Title</CardTitle>
+                                    <CardSubtitle>Artist</CardSubtitle>
+                                    Album / Genre / Discography.
+                                    Song Art
+                                    <CardImg top src="https://i.ytimg.com/vi/cjF-9In3hqU/maxresdefault.jpg" />
+                                    <AudioPlayer />
+                                </CardBody>
+                            </Card>
+                        
                     </Container>
                 </Col>
             </Row>
