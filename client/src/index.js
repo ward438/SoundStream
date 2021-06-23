@@ -8,7 +8,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Routing } from './components/Routing';
 import $ from 'jquery'; 
 import  Napster  from './napster.min.js';
-
+import './App.css';
 // const script = document.createElement('script')
 
 // script.type = 'text/javascript'

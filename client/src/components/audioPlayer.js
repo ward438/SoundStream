@@ -7,11 +7,12 @@ const styles = {
   textAlign: "center"
 };
 
-export default function AudioPlayer() {
+export default function AudioPlayer(props) {
+
   return (
     <div style={styles}>
       <ReactAudioPlayer
-        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
+        src={props.src}
         autoPlay={false}
         controls        
       >       

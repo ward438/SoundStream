@@ -1,46 +1,47 @@
 
 import React, { useState, useEffect } from "react";
 import "jquery";
-import $, { data } from 'jquery';
-import tracksTemplate from '../utils/napsterMeta';
-import $tracks from '../utils/napsterMeta'
-import NapsterMeta from '../utils/napsterMeta';
-import { Container, Button, Card } from 'shards-react';
+// import $, { data } from 'jquery';
+// import tracksTemplate from '../utils/napsterMeta';
+// import $tracks from '../utils/napsterMeta'
+// import NapsterMeta from '../utils/napsterMeta';
+import { Container, Button, Card, CardHeader, CardBody, CardFooter } from 'shards-react';
+import 'shards-react';
 import axios from 'axios';
+import AudioCard from './audioCard';
 
 // import SearchResults from "../pages/searchResults"
 
 export function TopTen() {
     const [top10, setTop10] = useState([]);
     useEffect(() => {
+        // console.log(setTop10)
+        // console.log(top10)
         axios({
             method: "GET",
             url: 'https://api.napster.com/v2.1/tracks/top?apikey=ZTc0ZmZiYWMtY2NjZS00M2YzLWIyYTQtOWVhZjYwYzQxZDY2',
-
-        })
-            .then(response => {
-                // setTop10(response);
-                console.log(response.data);
-
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json;charset=UTF-8'
             }
-            )
+        })
+            .then(res => {
+                let data = res.data.tracks;
+                setTop10(data);
+
+            })
     }, []);
+
     return (
         <React.Fragment>
-            {
-                top10.map(top => {
-                    return <Card key={top.artistId}>
-                        <Card.Body>
-                            <Card.Title>{top.artistId}</Card.Title>
-                            {/* <Card.Img variant="top" src={`https://react-portfolio-rob.s3.amazonaws.com/${}.png`} style={{ marginBottom: "10px" }} /> */}
-                            <Card.Text>
-                                { }
-                            </Card.Text>
-                        </Card.Body>
-                        <a href={`${top.previewURL}`}></a><br />
-                    </Card>
-                })
-            }
+            {top10.map((track) => <AudioCard
+                key={track.id}
+                src={track.previewURL}
+                title={track.name}
+                artist={track.artistName}
+                imgSrc={`https://api.napster.com/imageserver/v2/albums/${track.albumId}/images/200x200.jpg` + '?apikey=ZTc0ZmZiYWMtY2NjZS00M2YzLWIyYTQtOWVhZjYwYzQxZDY2'}
+                info={null}
+            />)}
         </React.Fragment >
     )
 }

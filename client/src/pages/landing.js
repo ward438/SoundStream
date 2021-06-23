@@ -2,8 +2,9 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
 import { Container, Row, Col } from "shards-react";
-import { Card, CardBody, CardTitle, CardSubtitle, CardImg } from "shards-react";
-import AudioPlayer from '../components/audioPlayer';
+import { Card, CardBody, CardTitle, CardSubtitle, CardImg, Button } from "shards-react";
+import AudioCard from '../components/audioPlayer';
+
 
 
 export function Landing() {
@@ -23,15 +24,9 @@ export function Landing() {
                     <Container className="musicPlayer">                                             
                             <Card>
                                 <CardBody>
-                                    <CardTitle>Song Title</CardTitle>
-                                    <CardSubtitle>Artist</CardSubtitle>
-                                    Album / Genre / Discography.
-                                    Song Art
-                                    <CardImg top src="https://i.ytimg.com/vi/cjF-9In3hqU/maxresdefault.jpg" />
-                                    <AudioPlayer />
-                                </CardBody>
-                            </Card>
-                        
+                                   Placeholder
+                                </CardBody>                                
+                            </Card>                        
                     </Container>
                 </Col>
             </Row>
@@ -39,7 +34,7 @@ export function Landing() {
                 <Col>
                     <CardBody className="bottomCard">
                         <CardTitle>news in music section</CardTitle>
-                        <CardSubtitle>Card subtitle</CardSubtitle>
+                        <CardSubtitle><Button href="/topTen">Napster Top 10</Button></CardSubtitle>
                         napster.com
                     </CardBody>
                 </Col>

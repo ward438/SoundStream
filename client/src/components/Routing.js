@@ -10,9 +10,10 @@ export function Routing() {
     return (
         <Switch>           
             <Route path="/about" component={About} />
-            <Route path="/account" component={Account} />            
+            <Route path="/account" component={Account} /> 
+            <Route path="/topTen" component={TopTen} />              
             <Route path="/" component={Landing}/>  
-            <Route path="/search" component={TopTen} />          
+                   
         </Switch>
     );
 }

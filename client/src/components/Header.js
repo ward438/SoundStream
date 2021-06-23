@@ -100,9 +100,8 @@ export default class NavExample extends React.Component {
               <FormInput className="border-0" placeholder="Search..." />
               <FormInput className="border-0" placeholder="Search..." id={'search'} onSubmit={Search} />
               <Button onClick={Search}>Submit</Button>
-            </InputGroup> */}
-            
-            <TopTen/>
+            </InputGroup> */}            
+            {/* <TopTen/> */}
           </Nav>
         </Collapse>
       </Navbar>
