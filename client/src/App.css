@@ -42,3 +42,11 @@
 .audio-card-img{
   width: 200px;
 }
+
+.cardScroll{
+  flex: 1;
+  background: #aaa;
+  max-height: 25.5em;
+  overflow-y: scroll;
+  
+}

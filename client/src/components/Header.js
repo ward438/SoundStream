@@ -24,7 +24,7 @@ import {
 
 } from "shards-react";
 import Search from './search';
-import {TopTen} from './search';
+import { TopTen } from './search';
 
 export default class NavExample extends React.Component {
   constructor(props) {
@@ -89,19 +89,7 @@ export default class NavExample extends React.Component {
               </DropdownMenu>
             </Dropdown>
           </Nav>
-
           <Nav navbar className="ml-auto">
-            {/* <InputGroup size="sm" seamless>
-              <InputGroupAddon type="prepend">
-                <InputGroupText>
-                  <FontAwesomeIcon icon={faSearch} />
-                </InputGroupText>
-              </InputGroupAddon>
-              <FormInput className="border-0" placeholder="Search..." />
-              <FormInput className="border-0" placeholder="Search..." id={'search'} onSubmit={Search} />
-              <Button onClick={Search}>Submit</Button>
-            </InputGroup> */}            
-            {/* <TopTen/> */}
           </Nav>
         </Collapse>
       </Navbar>

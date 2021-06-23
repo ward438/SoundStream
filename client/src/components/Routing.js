@@ -12,8 +12,7 @@ export function Routing() {
             <Route path="/about" component={About} />
             <Route path="/account" component={Account} /> 
             <Route path="/topTen" component={TopTen} />              
-            <Route path="/" component={Landing}/>  
-                   
+            <Route path="/" component={Landing}/>                   
         </Switch>
     );
 }
