@@ -1,9 +1,11 @@
 import './App.css';
 import Index from './Index'
 
+
 function App() {
-  return (    
-    <Index/>
+  
+  return (
+    <Index />
   );
 }
 

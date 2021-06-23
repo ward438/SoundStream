@@ -19,8 +19,12 @@ import {
   InputGroupAddon,
   InputGroupText,
   FormInput,
-  Collapse
+  Collapse,
+  Button
+
 } from "shards-react";
+import Search from './search';
+import {TopTen} from './search';
 
 export default class NavExample extends React.Component {
   constructor(props) {
@@ -79,7 +83,7 @@ export default class NavExample extends React.Component {
                 Account Details
               </DropdownToggle>
               <DropdownMenu>
-                <DropdownItem  href="/account">Account</DropdownItem>
+                <DropdownItem href="/account">Account</DropdownItem>
                 <DropdownItem>Playlists</DropdownItem>
                 <DropdownItem>Something else here</DropdownItem>
               </DropdownMenu>
@@ -87,14 +91,18 @@ export default class NavExample extends React.Component {
           </Nav>
 
           <Nav navbar className="ml-auto">
-            <InputGroup size="sm" seamless>
+            {/* <InputGroup size="sm" seamless>
               <InputGroupAddon type="prepend">
                 <InputGroupText>
                   <FontAwesomeIcon icon={faSearch} />
                 </InputGroupText>
               </InputGroupAddon>
               <FormInput className="border-0" placeholder="Search..." />
-            </InputGroup>
+              <FormInput className="border-0" placeholder="Search..." id={'search'} onSubmit={Search} />
+              <Button onClick={Search}>Submit</Button>
+            </InputGroup> */}
+            
+            <TopTen/>
           </Nav>
         </Collapse>
       </Navbar>
