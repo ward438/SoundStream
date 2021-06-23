@@ -25,6 +25,7 @@ import {
 } from "shards-react";
 import Search from './search';
 import { TopTen } from './search';
+import logo from "../apple-touch-icon.png";
 
 export default class NavExample extends React.Component {
   constructor(props) {
@@ -60,7 +61,7 @@ export default class NavExample extends React.Component {
   render() {
     return (
       <Navbar type="dark" theme="primary" expand="md">
-        <NavbarBrand href="/">SoundStream</NavbarBrand>
+        <NavbarBrand href="/"><img src={logo} style={{height: "80px"}} /></NavbarBrand>
         <NavbarToggler onClick={this.toggleNavbar} />
 
         <Collapse open={this.state.collapseOpen} navbar>
