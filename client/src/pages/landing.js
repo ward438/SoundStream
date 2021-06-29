@@ -7,6 +7,8 @@ import AudioCard from '../components/audioPlayer';
 import { TopTen } from '../components/search';
 import { SearchBar } from '../components/searchBar'
 import logo from "../favicon-32x32.png";
+// import Youtube from "../components/vimeo"
+// import ArtistSearch from "../components/searchArtistCall";
 
 
 
@@ -21,6 +23,7 @@ export function Landing() {
                             <CardSubtitle>account name</CardSubtitle>
                             favorites playlist
                             <SearchBar/>
+                            {/* <Youtube/> */}
 
                         </CardBody>
                     </Card>

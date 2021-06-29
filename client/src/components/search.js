@@ -1,11 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import "jquery";
-// import $, { data } from 'jquery';
-// import tracksTemplate from '../utils/napsterMeta';
-// import $tracks from '../utils/napsterMeta'
-// import NapsterMeta from '../utils/napsterMeta';
-import { Container, Button, Card, CardHeader, CardBody, CardFooter } from 'shards-react';
+// import { Container, Button, Card, CardHeader, CardBody, CardFooter } from 'shards-react';
 import 'shards-react';
 import axios from 'axios';
 import AudioCard from './audioCard';
@@ -28,6 +24,7 @@ export function TopTen() {
             .then(res => {
                 let data = res.data.tracks;
                 setTop10(data);
+                console.log(data)
 
             })
     }, []);
