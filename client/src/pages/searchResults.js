@@ -1,23 +1,25 @@
-export default function Searchresults() {
+
+import React from "react";
+// import '../utils/apiCall'
+// import AddData from '../utils/addData';
+import { Card, CardBody, Button, CardImg,CardTitle } from "shards-react";
+import UserInput from "../components/userInput";
+import AudioPlayer from '../components/audioPlayer';
+
+export default function SearchResults(props) {
     return (
-        <div class="container">
-            <div class="header">
-                Top Playlists
-            </div>
-            <div class="back-button"><a>Back to playlists</a></div>
-            <div id="playlist-container"></div>
-            <div id="tracks-container"></div>
-        </div>
-
-
-
-
-
-
-
-
-
-
+        <React.Fragment>
+            <Card style={{ width: '18rem' }} >
+                {/* <CardImg variant="top" src={props.images} /> */}
+                <CardBody>
+                    <CardTitle>Artist: {props.name}</CardTitle>
+                    <CardTitle>Albums: {props.albums}</CardTitle>
+                    {/* <p>Stations: {props.stations}</p> */}
+                    {/* <p>Top Tracks: {props.topTracks}</p> */}
+                </CardBody>
+            </Card>
+            <Button type="submit" onClick={() => UserInput(props)} style={{margin: '2em'}}> Add: {props.title} </Button>
+        </React.Fragment>
 
     )
 }

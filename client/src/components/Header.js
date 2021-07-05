@@ -2,8 +2,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css"
 import React from "react";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   Navbar,
   NavbarToggler,
@@ -15,17 +13,11 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
-  FormInput,
   Collapse,
-  Button
 
 } from "shards-react";
-import Search from './search';
-import { TopTen } from './search';
 import logo from "../apple-touch-icon.png";
+
 
 export default class NavExample extends React.Component {
   constructor(props) {
@@ -61,7 +53,7 @@ export default class NavExample extends React.Component {
   render() {
     return (
       <Navbar type="dark" theme="primary" expand="md">
-        <NavbarBrand href="/"><img src={logo} style={{height: "80px"}} /></NavbarBrand>
+        <NavbarBrand href="/"><img src={logo} style={{ height: "80px" }} /></NavbarBrand>
         <NavbarToggler onClick={this.toggleNavbar} />
 
         <Collapse open={this.state.collapseOpen} navbar>
@@ -92,6 +84,7 @@ export default class NavExample extends React.Component {
           </Nav>
           <Nav navbar className="ml-auto">
           </Nav>
+          {/* this is the search bar */}          
         </Collapse>
       </Navbar>
     );

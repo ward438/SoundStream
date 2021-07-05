@@ -2,11 +2,14 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
 import { Container, Row, Col } from "shards-react";
-import { Card, CardBody, CardTitle, CardSubtitle, CardImg, Button } from "shards-react";
-import AudioCard from '../components/audioPlayer';
+import { Card, CardBody, CardTitle, CardSubtitle } from "shards-react";
+// import AudioCard from '../components/audioPlayer';
 import { TopTen } from '../components/search';
-import { SearchBar } from '../components/searchBar'
-import logo from "../favicon-32x32.png";
+// import { SearchBar } from '../components/searchBar'
+// import logo from "../favicon-32x32.png";
+// import SearchResults from "../pages/searchResults";
+import UserInput from "../components/userInput";
+
 // import Youtube from "../components/vimeo"
 // import ArtistSearch from "../components/searchArtistCall";
 
@@ -21,10 +24,7 @@ export function Landing() {
                         <CardBody>
                             <CardTitle>SoundStream</CardTitle>
                             <CardSubtitle>account name</CardSubtitle>
-                            favorites playlist
-                            <SearchBar/>
-                            {/* <Youtube/> */}
-
+                            <UserInput />
                         </CardBody>
                     </Card>
                 </Col>
@@ -35,7 +35,7 @@ export function Landing() {
                                 <TopTen />
                             </CardBody>
                         </Card>
-                    </Container>
+                    </Container>                    
                 </Col>
             </Row>
 
