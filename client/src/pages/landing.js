@@ -1,8 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
-import { Container, Row, Col } from "shards-react";
-import { Card, CardBody, CardTitle, CardSubtitle } from "shards-react";
+import { Card, CardBody, CardTitle, CardSubtitle,Container, Row, Col } from "shards-react";
 // import AudioCard from '../components/audioPlayer';
 import { TopTen } from '../components/search';
 // import { SearchBar } from '../components/searchBar'

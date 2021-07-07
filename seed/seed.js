@@ -1,5 +1,5 @@
 let mongoose = require("mongoose");
-const Workout = require('../models/workouts');
+const Users = require('../models/User');
 require("dotenv").config({ path: '../routes/.env' });
 import {config} from "dotenv"; config()
 

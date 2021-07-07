@@ -1,23 +1,9 @@
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "shards-ui/dist/css/shards.min.css"
 import React from "react";
-import {
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  Collapse,
-
-} from "shards-react";
 import logo from "../apple-touch-icon.png";
-
+import { Link } from "react-router-dom";
+import { Navbar, Nav } from 'react-bootstrap';
 
 export default class NavExample extends React.Component {
   constructor(props) {
@@ -53,39 +39,21 @@ export default class NavExample extends React.Component {
   render() {
     return (
       <Navbar type="dark" theme="primary" expand="md">
-        <NavbarBrand href="/"><img src={logo} style={{ height: "80px" }} /></NavbarBrand>
-        <NavbarToggler onClick={this.toggleNavbar} />
+        
+        <Nav.Link as={Link} active to="/"><Navbar.Brand><img src={logo} style={{ height: "80px" }} /></Navbar.Brand>
+        </Nav.Link>
+        <Navbar.Toggle aria-controls='basic-navbar-nav' />
 
-        <Collapse open={this.state.collapseOpen} navbar>
-          <Nav navbar>
-            <NavItem>
-              <NavLink active href="/about">
-                About
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="#" disabled>
-                Disabled
-              </NavLink>
-            </NavItem>
-            <Dropdown
-              open={this.state.dropdownOpen}
-              toggle={this.toggleDropdown}
-            >
-              <DropdownToggle nav caret>
-                Account Details
-              </DropdownToggle>
-              <DropdownMenu>
-                <DropdownItem href="/account">Account</DropdownItem>
-                <DropdownItem>Playlists</DropdownItem>
-                <DropdownItem>Something else here</DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
+        <Navbar.Collapse id='basic-navbar-nav'>
+          <Nav className='mr-auto'>
+            <Nav.Link as={Link} active to="/about">
+              About
+            </Nav.Link>
           </Nav>
           <Nav navbar className="ml-auto">
           </Nav>
-          {/* this is the search bar */}          
-        </Collapse>
+          {/* this is the search bar */}
+        </Navbar.Collapse>
       </Navbar>
     );
   }

@@ -1,10 +1,11 @@
 
 import React, { useState } from "react";
 import SearchField from "react-search-field";
-import SearchResults from "../pages/searchResults";
+// import SearchResults from "../pages/searchResults";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MusicSearch from "../utils/musicSearch";
 import AudioCard from "./audioCard";
+// import AlbumCall from "../utils/albumsCall";
 
 export default function UserInput(props) {
     const [searchReturn, setSearchReturn] = useState([]);
@@ -15,7 +16,7 @@ export default function UserInput(props) {
         })
     }
 
-    debugger;
+    // debugger;
     return <React.Fragment>
         <SearchField
             placeholder="Enter an artist..."
@@ -28,11 +29,13 @@ export default function UserInput(props) {
             searchReturn.map((item) => <AudioCard
                 id={item.id}
                 key={item.id}
-                artist={item.name}
-                albums={item.links.albums.href + '?apikey=ZTc0ZmZiYWMtY2NjZS00M2YzLWIyYTQtOWVhZjYwYzQxZDY2'}
-                // description={item.volumeInfo?.description}
-                // images={`https://api.napster.com/imageserver/v2/albums/${item.id}/images/200x200.jpg` + '?apikey=ZTc0ZmZiYWMtY2NjZS00M2YzLWIyYTQtOWVhZjYwYzQxZDY2'}
-                // images={item.links.images.href}
+                artist={item.name}                
+                aristImageReturn={`https://api.napster.com/imageserver/v2/artists/${item?.id}/images/200x200.jpg`} 
+                src={item.links.topTracks.href} 
+                // playlists={}            
+
+                // albums={item.albumGroups.singlesAndEPs}
+
                 info={null}
             />)
         }
