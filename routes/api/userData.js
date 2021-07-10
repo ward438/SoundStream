@@ -11,28 +11,32 @@ const { db } = require('../../models/User');
 
 
 
-router.post('/add-artist', ({ body }, res) => {
-    // res.json({ message: 'testing success' })
-    Users.create(body)    
-                                            //  
-        .then((artistId) => Users.findOneAndUpdate({}, { $push: { Users: artistId } }, { new: true }))
-        .then(artistId => {
-            res.json(artistId)
-        })
-
-        .catch(err => {
-            res.status(400).json(err)
-        })
-
-
-    // Users.create(req)
-    //     .then(({ _id }) => db.Users.findOneAndUpdate({}, { $push: { artistId: _id } }, { new: true }))
-    //     .then(dbUsers => {
-    //         res.json(dbUsers);
+router.put('/add-artist', ({ body }, res) => {
+    // res.json({ message: 'testing success' })    
+    // Users.create(body)                                              //  
+    //     .then((artistId) => Users.findOneAndUpdate({}, { $push: { Users: artistId } }, { new: true }))
+    //     .then(artistId => {
+    //         res.json(artistId)
     //     })
+
     //     .catch(err => {
-    //         res.json(err);
+    //         res.status(400).json(err)
     //     })
+
+    console.log(body)
+    Users.findByIdAndUpdate(
+        { _id: body._id },
+        {$push: { favoriteArtists: [body.artistId] }},       
+        function(err, result) {
+            if (err) {
+                res.send(err);
+            } else {
+                console.log(result)
+                res.send(result);
+            }
+        }
+    )
+
 
     // const artistId = new Users({ artistId: req.body.artistId })
     // artistId.save((err, res) => {

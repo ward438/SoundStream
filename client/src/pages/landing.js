@@ -22,7 +22,7 @@ export function Landing() {
                     <Card className="topCard">
                         <CardBody>
                             <CardTitle>SoundStream</CardTitle>
-                            <CardSubtitle>account name</CardSubtitle>
+                            <CardSubtitle>artist search</CardSubtitle>
                             <UserInput />
                         </CardBody>
                     </Card>

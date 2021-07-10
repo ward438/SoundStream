@@ -1,18 +1,12 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
-import axios from 'axios';
 import {
     Card,
-    CardBody,
-    // CardTitle,
+    CardBody,    
     CardSubtitle,
-    Container,
-    // Row,
-    // Col,
-    Form,
-    // FormGroup,
-    // FormInput
+    Container,    
+    Form,    
 } from "shards-react";
 import { AuthContext } from '@ryanar/react-auth-provider';
 

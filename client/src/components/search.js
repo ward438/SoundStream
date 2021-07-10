@@ -1,12 +1,11 @@
 
 import React, { useState, useEffect } from "react";
 import "jquery";
-// import { Container, Button, Card, CardHeader, CardBody, CardFooter } from 'shards-react';
 import 'shards-react';
 import axios from 'axios';
 import AudioCard from './audioCard';
 
-// import SearchResults from "../pages/searchResults"
+
 
 export function TopTen() {
     const [top10, setTop10] = useState([]);

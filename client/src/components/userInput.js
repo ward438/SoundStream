@@ -14,7 +14,10 @@ export default function UserInput(props) {
             // console.log(response);
             setSearchReturn(response);
         })
+
     }
+
+
 
     // debugger;
     return <React.Fragment>
@@ -29,13 +32,11 @@ export default function UserInput(props) {
             searchReturn.map((item) => <AudioCard
                 id={item.id}
                 key={item.id}
-                artist={item.name}                
-                aristImageReturn={`https://api.napster.com/imageserver/v2/artists/${item?.id}/images/200x200.jpg`} 
-                src={item.links.topTracks.href} 
-                // playlists={}            
-
+                artist={item.name}
+                aristImageReturn={`https://api.napster.com/imageserver/v2/artists/${item?.id}/images/200x200.jpg`}
+                src={item.links.topTracks.href}
+                // playlists={}
                 // albums={item.albumGroups.singlesAndEPs}
-
                 info={null}
             />)
         }

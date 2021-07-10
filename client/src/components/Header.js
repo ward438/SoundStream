@@ -38,9 +38,8 @@ export default class NavExample extends React.Component {
 
   render() {
     return (
-      <Navbar type="dark" theme="primary" expand="md">
-        
-        <Nav.Link as={Link} active to="/"><Navbar.Brand><img src={logo} style={{ height: "80px" }} /></Navbar.Brand>
+      <Navbar type="dark" bg="primary" theme="primary" expand="md">        
+        <Nav.Link as={Link} active to="/"><Navbar.Brand><img src={logo} alt={"brand"} style={{ height: "80px" }} /></Navbar.Brand>
         </Nav.Link>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
 

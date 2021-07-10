@@ -1,10 +1,9 @@
 import React from "react";
 import ReactAudioPlayer from "react-audio-player";
-import axios from "axios"
+
 
 
 export default function AudioPlayer(props) {
-
   return (
     <div >
       <ReactAudioPlayer
@@ -16,7 +15,6 @@ export default function AudioPlayer(props) {
       </ReactAudioPlayer>
     </div>
   )
-
 };
 
 
