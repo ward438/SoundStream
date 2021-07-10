@@ -14,11 +14,11 @@ const Users = require("./models/User");
 
 dotenv.config();
 app.use(cookieParser());
-app.use(express.static("public"));
+// app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(routes);
-app.use('/static', express.static(path.join(__dirname, '../client/build//static')));
+// app.use('/static', express.static(path.join(__dirname, '../client/build/static')));
 
 app.use(session({
     secret: process.env.SECRET_KEY,
@@ -42,20 +42,9 @@ mongoose.connect(MONGODB_URI = "mongodb://localhost:27017/soundStream" || proces
     .catch((err) => {
         console.error(err);
     });
-
-if (process.env.NODE_ENV === "production") {
-    // Send every other request to the React app
-    app.get("*", (req, res) => {
-        res.sendFile(path.join(__dirname, "./client/build/index.html"));
-    });
-} else {
-    let proxy = require('express-http-proxy');
-    app.use('*', proxy('http://localhost:3000', {
-        proxyReqPathResolver: function (req, res) {
-            return req.url + req.originalUrl
-        }
-    }))
-}
+    if (process.env.NODE_ENV === 'production') {
+        app.use(express.static('client/build'));
+    }
 
 app.use(routes);
 

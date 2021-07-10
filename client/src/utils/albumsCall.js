@@ -2,7 +2,6 @@
 import axios from "axios";
 
 export default async function AlbumCall(albums) {
-    // const [userSearch, setUserSearch] = useState([]);
     const KEY = "MDEwYzIwZmEtZDMxNy00YzJmLTk0MWUtMmEwNWE1YjUwZWI4";       
     const results = await axios({
         method: "GET",

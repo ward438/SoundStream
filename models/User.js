@@ -8,8 +8,7 @@ const UserSchema = new Schema({
   },
   password: {
     type: String
-  },
-  // favoriteArtists: [String],
+  }, 
   favoriteArtists: [{
     type: String
 }]

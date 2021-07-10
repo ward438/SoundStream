@@ -1,29 +1,26 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { Card, CardBody, CardTitle, CardSubtitle, CardImg } from "shards-react";
 import AudioPlayer from './audioPlayer';
 import AddArtist from '../utils/addArtist';
 
 export default function AudioCard(props) {
+    let tmpUrls = props.src;
+    if (typeof tmpUrls != 'object') {
+        tmpUrls = [[tmpUrls, '']];
+    }
 
-
-
-
-
-
-    // console.log(props.albums)
+    const [songUrls, setSongUrls] = useState(tmpUrls);
     return (
         <Card style={{ margin: '10px' }}>
             <CardBody>
                 <CardTitle>{props.title}</CardTitle>
                 <CardSubtitle>{props.artist}</CardSubtitle>
-                {props.info}   {props.src}
-                <CardImg top src={props.aristImageReturn} className="audio-card-img" />
+                {props.info}
+                <CardImg top src={props.artistImageReturn} className="audio-card-img" />
                 <CardImg top src={props.imgSrc} className="audio-card-img" />
-                <AudioPlayer src={props.src} style={{}} />
+                {songUrls.map((songUrl, index) => <div key={index}>{songUrl[1]} <AudioPlayer src={songUrl[0]} style={{}} /></div>)}
                 <AddArtist artistId={props.id} />
-                <p>{props.id}</p>
-
             </CardBody>
 
         </Card>

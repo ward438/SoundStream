@@ -5,21 +5,25 @@ import SearchField from "react-search-field";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MusicSearch from "../utils/musicSearch";
 import AudioCard from "./audioCard";
+import SearchPlayback from "../utils/searchPlayback";
 // import AlbumCall from "../utils/albumsCall";
 
 export default function UserInput(props) {
     const [searchReturn, setSearchReturn] = useState([]);
+
     const handleMusicSearch = (artist) => {
-        MusicSearch(artist).then(response => {
-            // console.log(response);
-            setSearchReturn(response);
+        MusicSearch(artist).then(artists => {
+            Promise.all(artists.map(artistItem => SearchPlayback(artistItem.id))).then(songUrls => {
+                artists = artists.map((artist, index) => {
+                    artist.songUrls = songUrls[index];
+                    return artist
+                })
+                setSearchReturn(artists);
+                console.log(artists)
+            });
         })
-
     }
-
-
-
-    // debugger;
+    console.log(searchReturn);
     return <React.Fragment>
         <SearchField
             placeholder="Enter an artist..."
@@ -33,10 +37,8 @@ export default function UserInput(props) {
                 id={item.id}
                 key={item.id}
                 artist={item.name}
-                aristImageReturn={`https://api.napster.com/imageserver/v2/artists/${item?.id}/images/200x200.jpg`}
-                src={item.links.topTracks.href}
-                // playlists={}
-                // albums={item.albumGroups.singlesAndEPs}
+                artistImageReturn={`https://api.napster.com/imageserver/v2/artists/${item?.id}/images/200x200.jpg`}
+                src={item.songUrls}
                 info={null}
             />)
         }

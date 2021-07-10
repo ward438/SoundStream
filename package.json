@@ -18,7 +18,7 @@
     "url": "git+https://github.com/ward438/SoundStream.git"
   },
   "private": true,
-  "proxy": "http://localhost:3001/",
+  
   "keywords": [],
   "author": "",
   "license": "ISC",

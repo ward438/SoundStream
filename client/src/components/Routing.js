@@ -10,6 +10,9 @@ import { Login } from "../pages/Login";
 import { useHistory } from 'react-router-dom';
 import { AuthProvider } from '@ryanar/react-auth-provider';
 import { AuthContext } from '@ryanar/react-auth-provider';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export function Routing() {
     const [isAuth, setIsAuth] = useState(false);
@@ -42,6 +45,7 @@ export function Routing() {
 
     return (
         <React.Fragment>
+            <ToastContainer />
             <AuthProvider onLogin={handleLogin} onLogout={handleLogout} defaultAuthenticated={isAuth}>
                 <Switch>
                     <Route path="/login" exact component={Login} />

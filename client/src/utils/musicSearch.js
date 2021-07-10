@@ -2,7 +2,6 @@
 import axios from "axios";
 
 export default async function MusicSearch(artist) {
-    // const [userSearch, setUserSearch] = useState([]);
     const KEY = "MDEwYzIwZmEtZDMxNy00YzJmLTk0MWUtMmEwNWE1YjUwZWI4";       
     const results = await axios({
         method: "GET",
@@ -11,16 +10,8 @@ export default async function MusicSearch(artist) {
             'Accept': 'application/json',
             'Content-Type': 'application/json;charset=UTF-8'
         }
-    })    
-
-    // console.log(results)    
-    // console.log(results.data.search.data.artists[0])
-    // console.log(results.data.search.data.artists[0].links.albums.href)
-    // console.log(results.data.search.data.artists[0].albumGroups.singlesAndEPs[0])
+    }) 
     console.log(results.data.search.data.artists)
-
-    // console.log(results.data.search.data.artists)
-
     return results.data.search.data.artists;
 }
 
