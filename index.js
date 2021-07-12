@@ -50,6 +50,7 @@ app.use(routes);
 // db.test.find({"_id" : ObjectId("4ecc05e55dd98a436ddcc47c")})
 // creates user in lue of authentication stuff
 // todo - User create hardcoded uuid from frontend if it doesn't exist
+
 const userId = '60e8a7a23c2a9a18acebe544';
 Users.find({ "_id": userId }).then((users) => {
     if (users.length == 0) {
