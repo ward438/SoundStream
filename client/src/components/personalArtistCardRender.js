@@ -18,12 +18,8 @@ export default function PersonalArtistCardRender(props) {
     return (
         <Card style={{ maxWidth: props.maxWidth }}>
             <CardHeader></CardHeader>
-            <CardImg src={props.img} />
-            <CardBody>
-                <CardTitle>Artist List</CardTitle>
-                
-            </CardBody>
-            <CardFooter>SoundStream</CardFooter>
+            <CardImg src={props.img} />           
+            
         </Card>
 
     )
