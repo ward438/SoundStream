@@ -10,9 +10,7 @@ import AudioCard from './audioCard';
 export function TopTen() {
     const [top10, setTop10] = useState([]);
     const KEY = "MDEwYzIwZmEtZDMxNy00YzJmLTk0MWUtMmEwNWE1YjUwZWI4"
-    useEffect(() => {
-        // console.log(setTop10)
-        // console.log(top10)
+    useEffect(() => {        
         axios({
             method: "GET",
             url: `https://api.napster.com/v2.1/tracks/top?apikey=${KEY}`,

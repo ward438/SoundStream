@@ -1,5 +1,4 @@
 
-import React, { useState, useEffect } from "react";
 import "jquery";
 import 'shards-react';
 import axios from 'axios';

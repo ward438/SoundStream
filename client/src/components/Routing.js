@@ -2,10 +2,7 @@
 import { Switch, Route, Redirect } from "react-router-dom";
 import React, { useState } from 'react';
 import { About } from "../pages/About";
-// import { Account } from "../pages/Account";
 import { Landing } from "../pages/landing";
-// import { TopTen } from "../components/search";
-// import SearchResults from "../pages/searchResults";
 import { Login } from "../pages/Login";
 import { useHistory } from 'react-router-dom';
 import { AuthProvider } from '@ryanar/react-auth-provider';
