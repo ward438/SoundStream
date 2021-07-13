@@ -17,11 +17,8 @@ app.use(cookieParser());
 // app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(routes);
-// app.use('/static', express.static(path.join(__dirname, '../client/build/static')));
-
 app.use(session({
-    secret: process.env.SECRET_KEY || "mytestsecret" ,
+    secret: process.env.SECRET_KEY || "mytestsecret",
     resave: false,
     saveUninitialized: false,
     store: new FileStore,
@@ -32,7 +29,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost:27017/soundStream",  {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/soundStream", {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
@@ -42,10 +39,10 @@ mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost:27017/soundStr
     .catch((err) => {
         console.error(err);
     });
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'));
-}
 
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, 'client/build')));
+}
 app.use(routes);
 // db.test.find({"_id" : ObjectId("4ecc05e55dd98a436ddcc47c")})
 // creates user in lue of authentication stuff
