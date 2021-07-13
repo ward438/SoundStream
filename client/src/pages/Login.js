@@ -12,18 +12,9 @@ import { AuthContext } from '@ryanar/react-auth-provider';
 
 function handleSubmit(setAuthenticated, e) {
     e.preventDefault()
-
     const { username, password } = e.target.elements
     console.log({ username: username.value, password: password.value })
     setAuthenticated(true);
-    // axios.post('/api/userData/login', { username: username.value, password: password.value })
-    //     .then(response => { 
-    //         // if successful
-    //         setAuthenticated(true);
-    //         // else
-    //         setAuthenticated(false);
-    //     })
-
 }
 
 export function Login() {
@@ -31,13 +22,13 @@ export function Login() {
 
     return (
         <Container>
-            <Card className="topCard">
+            <Card className="topCard" style={{margin: '2rem', border: '1px solid', boxShadow: '5px 5px #01101848'}}>
                 <CardBody>
                     <CardSubtitle>SoundStream Login</CardSubtitle>
-                    <p>Please enter your SoundStream credentials</p>
+                    <p>Please enter your credentials</p>
                     <Form onSubmit={(e)=>handleSubmit(setAuthenticated, e)}>
-                        <input type="text" id="username" placeholder="Username" />
-                        <input type="password" id="password" placeholder="Password" />
+                        <input type="text" id="username" placeholder="CoolGuy419" />
+                        <input type="password" id="password" placeholder="********" />
                         <input type="submit" value="Login" />
                     </Form>
                 </CardBody>

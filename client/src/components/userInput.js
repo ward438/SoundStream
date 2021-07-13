@@ -7,7 +7,7 @@ import MusicSearch from "../utils/musicSearch";
 import AudioCard from "./audioCard";
 import SearchPlayback from "../utils/searchPlayback";
 // import AlbumCall from "../utils/albumsCall";
-
+import './styles.css';
 export default function UserInput(props) {
     const [searchReturn, setSearchReturn] = useState([]);
 
@@ -25,12 +25,12 @@ export default function UserInput(props) {
     }
     console.log(searchReturn);
     return <React.Fragment>
-        <SearchField
+        <SearchField 
             placeholder="Enter an artist..."
             onEnter={data => handleMusicSearch(data)}
             onSearchClick={data => handleMusicSearch(data)}
             searchText=""
-            classNames="test-class"
+            classNames="test-class"                  
         />
         {
             searchReturn.map((item) => <AudioCard

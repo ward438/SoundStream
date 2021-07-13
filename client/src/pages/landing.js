@@ -1,16 +1,11 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
-import { Card, CardBody, CardTitle, CardSubtitle,Container, Row, Col } from "shards-react";
-// import AudioCard from '../components/audioPlayer';
+import { Card, CardBody, CardTitle, Container, Row, Col } from "shards-react";
 import { TopTen } from '../components/search';
-// import { SearchBar } from '../components/searchBar'
-// import logo from "../favicon-32x32.png";
-// import SearchResults from "../pages/searchResults";
 import UserInput from "../components/userInput";
+import '../components/styles.css'
 
-// import Youtube from "../components/vimeo"
-// import ArtistSearch from "../components/searchArtistCall";
 
 
 
@@ -19,10 +14,9 @@ export function Landing() {
         <Container className="dr-example-container">
             <Row>
                 <Col>
-                    <Card className="topCard">
+                    <Card className="topCard" style={{ }} >
                         <CardBody>
-                            <CardTitle>SoundStream</CardTitle>
-                            <CardSubtitle>artist search</CardSubtitle>
+                            <CardTitle>Artist Search</CardTitle>                            
                             <UserInput />
                         </CardBody>
                     </Card>
@@ -30,7 +24,7 @@ export function Landing() {
                 <Col>
                     <Container className="musicPlayer">
                         <Card>
-                            <CardBody className="cardScroll" style={{ borderRadius: '15px' }}>
+                            <CardBody className="cardScroll" style={{  }}>
                                 <TopTen />
                             </CardBody>
                         </Card>

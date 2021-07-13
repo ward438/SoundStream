@@ -1,0 +1,25 @@
+.react-search-field {
+    width: 100%;    
+    box-shadow: 5px 5px #01101848;    
+}
+.topCard {
+    height: 95%;
+    margin-top: 3rem;         
+    border: 1px solid;
+}
+
+.cardScroll {    
+    border-radius:15px;
+    border: 1px solid;
+    box-shadow: 8px 8px #06466428;
+}
+
+.musicPlayer {
+    margin-top: 3rem;
+    
+}
+
+
+
+
+

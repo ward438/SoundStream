@@ -12,7 +12,7 @@ export default function AudioCard(props) {
 
     const [songUrls, setSongUrls] = useState(tmpUrls);
     return (
-        <Card style={{ margin: '10px' }}>
+        <Card style={{ margin: '10px', color: 'red'}}>
             <CardBody>
                 <CardTitle>{props.title}</CardTitle>
                 <CardSubtitle>{props.artist}</CardSubtitle>
