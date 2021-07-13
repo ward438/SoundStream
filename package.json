@@ -7,7 +7,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "dev": "nodemon server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
@@ -39,6 +39,7 @@
     "express-favicon": "^2.0.1",
     "express-http-proxy": "^1.6.2",
     "express-session": "^1.17.2",
+    "if-env": "^1.0.4",
     "jquery": "^3.6.0",
     "mongojs": "^3.1.0",
     "mongoose": "^5.12.14",
