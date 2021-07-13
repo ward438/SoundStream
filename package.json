@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/ward438/SoundStream/issues"
   },
-  "homepage": "https://github.com/ward438/SoundStream#readme",
+  "homepage": "https://obscure-mountain-40983.herokuapp.com/",
   "dependencies": {
     "@ryanar/react-auth-provider": "^0.3.3",
     "bcrypt": "^5.0.1",
