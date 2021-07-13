@@ -31,7 +31,7 @@ export default function PersonalArtistCard(props) {
     })
       .then(response => {
         // Ternary operator - Question ? return If True : return If False
-        setData(response.data.images.length > 0 ? response.data.images[0].url : placeHolderUrl);
+        setData(response.data.images?.length > 0 ? response.data.images[0].url : placeHolderUrl);
       })
   }, []);
 

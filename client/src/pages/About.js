@@ -25,9 +25,8 @@ export function About() {
     <React.Fragment>
       <Row>
         {data.favoriteArtists.map((artist, index) =>
-          <div style={{margin: '1rem'}}>
+          <div style={{ margin: '1rem' }} key={index}>
             <PersonalArtistCard
-              key={index}
               artist={artist}
             />
           </div>
