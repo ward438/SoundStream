@@ -15,7 +15,6 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
-    "electron": "^13.1.4",
     "if-env": "^1.0.4",
     "jquery": "^3.6.0",
     "js-cookie": "^2.2.1",
