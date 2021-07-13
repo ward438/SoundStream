@@ -21,7 +21,7 @@ app.use(routes);
 // app.use('/static', express.static(path.join(__dirname, '../client/build/static')));
 
 app.use(session({
-    secret: process.env.SECRET_KEY,
+    secret: process.env.SECRET_KEY || "mytestsecret" ,
     resave: false,
     saveUninitialized: false,
     store: new FileStore,
@@ -32,7 +32,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect(MONGODB_URI = "mongodb://localhost:27017/soundStream" || process.env.MONGODB_URI, {
+mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost:27017/soundStream",  {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
