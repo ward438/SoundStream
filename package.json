@@ -29,7 +29,6 @@
   },
   "homepage": "https://github.com/ward438/SoundStream#readme",
   "dependencies": {
-    "@babel/core": "^7.14.6",
     "@ryanar/react-auth-provider": "^0.3.3",
     "bcrypt": "^5.0.1",
     "connect": "^3.7.0",

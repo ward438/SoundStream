@@ -1,13 +1,10 @@
 
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect, useHistory } from "react-router-dom";
 import React, { useState } from 'react';
 import { About } from "../pages/About";
 import { Landing } from "../pages/landing";
 import { Login } from "../pages/Login";
-import { useHistory } from 'react-router-dom';
-import { AuthProvider } from '@ryanar/react-auth-provider';
-import { AuthContext } from '@ryanar/react-auth-provider';
-import { ToastContainer } from 'react-toastify';
+import { AuthContext, ToastContainer, AuthProvider } from '@ryanar/react-auth-provider';
 import 'react-toastify/dist/ReactToastify.css';
 
 
