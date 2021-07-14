@@ -13,26 +13,13 @@ export function Landing() {
     return (
         <Container className="dr-example-container">
             <Row>
-                <Col>
-                    <Card className="topCard" style={{ }} >
-                        <CardBody>
-                            <CardTitle>Artist Search</CardTitle>                            
-                            <UserInput />
-                        </CardBody>
-                    </Card>
-                </Col>
-                <Col>
-                    <Container className="musicPlayer">
-                        <Card>
-                            <CardBody className="cardScroll" style={{  }}>
-                                <TopTen />
-                            </CardBody>
-                        </Card>
-                    </Container>                    
-                </Col>
+                <Card className="topCard" style={{ width: '100%' }} >
+                    <CardBody>
+                        <CardTitle>Artist Search</CardTitle>
+                        <UserInput />
+                    </CardBody>
+                </Card>
             </Row>
-
         </Container>
     );
 }
-// }

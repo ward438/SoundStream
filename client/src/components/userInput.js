@@ -5,6 +5,7 @@ import SearchField from "react-search-field";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MusicSearch from "../utils/musicSearch";
 import AudioCard from "./audioCard";
+import { Row } from 'react-bootstrap';
 import SearchPlayback from "../utils/searchPlayback";
 // import AlbumCall from "../utils/albumsCall";
 import './styles.css';
@@ -25,23 +26,29 @@ export default function UserInput(props) {
     }
     console.log(searchReturn);
     return <React.Fragment>
-        <SearchField 
+        <SearchField
             placeholder="Enter an artist..."
             onEnter={data => handleMusicSearch(data)}
             onSearchClick={data => handleMusicSearch(data)}
             searchText=""
-            classNames="test-class"                  
+            classNames="test-class"
         />
-        {
-            searchReturn.map((item) => <AudioCard
-                id={item.id}
-                key={item.id}
-                artist={item.name}
-                artistImageReturn={`https://api.napster.com/imageserver/v2/artists/${item?.id}/images/200x200.jpg`}
-                src={item.songUrls}
-                info={null}
-            />)
-        }
+        <Row>
+            {
+                searchReturn.map((item) =>
+                    <div style={{ width: '50%' }}>
+                        <AudioCard
+                            id={item.id}
+                            key={item.id}
+                            artist={item.name}
+                            artistImageReturn={`https://api.napster.com/imageserver/v2/artists/${item?.id}/images/200x200.jpg`}
+                            src={item.songUrls}
+                            info={null}
+                        />
+                    </div>
+                )
+            }
+        </Row>
 
     </React.Fragment>
 

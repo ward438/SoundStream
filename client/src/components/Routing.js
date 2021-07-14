@@ -9,6 +9,7 @@ import { AuthProvider } from '@ryanar/react-auth-provider';
 import { AuthContext } from '@ryanar/react-auth-provider';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { TopTenArtists } from "../pages/TopTenArtists";
 
 
 export function Routing() {
@@ -47,7 +48,8 @@ export function Routing() {
                 <Switch>
                     <Route path="/login" exact component={Login} />
                     <AuthRoute path="/" exact component={Landing} />
-                    <AuthRoute path="/about" exact component={About} />
+                    <AuthRoute path="/artist-collections" exact component={About} />
+                    <AuthRoute path="/top-10-artists" exact component={TopTenArtists} />
                 </Switch>
             </AuthProvider>
         </React.Fragment>

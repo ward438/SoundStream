@@ -44,8 +44,11 @@ export default class NavExample extends React.Component {
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='mr-auto' style={{color: 'white', fontSize: '2em'}}>
-            <Nav.Link as={Link} active to="/about" style={{border: '1px solid', borderRadius: '10px', height: '80px', boxShadow: '8px 8px #0b73a3b7', justifyContent: 'center', alignItems: 'center', display: 'flex'}}>
+            <Nav.Link as={Link} active to="/artist-collections" style={{border: '1px solid', borderRadius: '10px', height: '80px', boxShadow: '8px 8px #0b73a3b7', justifyContent: 'center', alignItems: 'center', display: 'flex'}}>
               Artist Collections
+            </Nav.Link>
+            <Nav.Link as={Link} active to="/top-10-artists" style={{marginLeft: '1rem', border: '1px solid', borderRadius: '10px', height: '80px', boxShadow: '8px 8px #0b73a3b7', justifyContent: 'center', alignItems: 'center', display: 'flex'}}>
+              Top 10 Artists
             </Nav.Link>
           </Nav>
           <Nav navbar className="ml-auto" style={{color: 'white', marginRight: '5em'}}>

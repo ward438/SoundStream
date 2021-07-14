@@ -22,7 +22,7 @@ export function About() {
 
 
   return (
-    <React.Fragment>
+    <div style={{height: '100%', margin: '5rem'}}>
       <Row>
         {data.favoriteArtists.map((artist, index) =>
           <div style={{ margin: '1rem' }} key={index}>
@@ -32,8 +32,7 @@ export function About() {
           </div>
         )}
       </Row>
-
-    </React.Fragment>
+    </div>
   );
 
 };
