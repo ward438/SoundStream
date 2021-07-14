@@ -16,6 +16,7 @@ width="500px"/>
 
 <img src="https://github.com/ward438/SoundStream/blob/main/returnCollapsed.PNG" alt="collapsed"
 width="500px"/>
+
 <img src="https://github.com/ward438/SoundStream/blob/main/searchExpanded.PNG" alt="expanded"
 width="500px"/>
 
